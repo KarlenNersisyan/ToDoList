@@ -14,7 +14,10 @@
     />
     <meta name="author" content="@nersisyan_karl" />
     <!-- Facebook Debugger Start-->
-    <meta property="og:url" content="" />
+    <meta
+      property="og:url"
+      content="https://karlennersisyan.github.io/ToDoList/"
+    />
     <meta property="og:title" content="ToDo" />
     <meta
       property="og:description"
@@ -74,10 +77,26 @@
     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
     <meta name="theme-color" content="#ffffff" />
     <!-- -------- -->
+
     <title>ToDoList</title>
+    <!-- Fontawesome Start -->
+    <link
+      href="https://kit-pro.fontawesome.com/releases/v5.15.1/css/pro.min.css"
+      rel="stylesheet"
+    />
+    <!-- Fontawesome End -->
     <link rel="icon" href="./img/logo/logo-background.jpg" />
     <script src="./script.js" defer></script>
     <link rel="stylesheet" href="./style.css" />
   </head>
-  <body></body>
+  <body>
+    <div id="myDIV" class="header">
+      <input type="text" id="myInput" placeholder="Title..." />
+      <span onclick="newElement()" class="addBtn">Add</span>
+    </div>
+
+    <ul id="myUL">
+      <li class="checked">Hi:My name is Karl</li>
+    </ul>
+  </body>
 </html>
