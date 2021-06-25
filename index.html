@@ -90,13 +90,21 @@
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-    <div id="myDIV" class="header">
-      <input type="text" id="myInput" placeholder="Title..." />
-      <span onclick="newElement()" class="addBtn">Add</span>
+    <div class="container">
+      <div class="todo-content">
+        <div class="wrapper">
+          <input type="text" id="input" placeholder="Fill in here..." />
+          <span class="addBtn">Add</span>
+          <div class="remove-container">
+            <button type="button" id="removeList">Remove all</button>
+          </div>
+        </div>
+        <div class="toDoList-Container">
+          <div class="toDoList-Content">
+            <ul id="toDoList-Container"></ul>
+          </div>
+        </div>
+      </div>
     </div>
-
-    <ul id="myUL">
-      <li class="checked">Hi:My name is Karl</li>
-    </ul>
   </body>
 </html>
