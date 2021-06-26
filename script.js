@@ -1,7 +1,12 @@
 const addBtn = document.querySelector(".addBtn");
 const input = document.querySelector("#input");
-const toDoListContainer = document.querySelector("#toDoList-Container");
 const removeList = document.querySelector("#removeList");
+
+const toDoListContainer = document.querySelector("#toDoList-Container");
+
+//Message
+let messageClose = document.querySelector(".close");
+let messageUser = document.querySelector(".messageUser-background");
 
 addBtn.addEventListener("click", () => {
   if (input.value !== "") {
@@ -37,11 +42,6 @@ addBtn.addEventListener("click", () => {
     listWrapper.append(buttonContainer);
     toDoListContainer.append(listWrapper);
 
-    //  Remove Function
-    removeButton.addEventListener("click", function () {
-      this.parentNode.parentNode.remove();
-    });
-
     // Edit Function
     editButton.addEventListener("click", function () {
       const inpElement = this.parentNode.previousElementSibling.childNodes[0];
@@ -69,12 +69,22 @@ addBtn.addEventListener("click", () => {
         inputSpan.classList.add("line-through");
       }
     });
+    //  Remove Function
+    removeButton.addEventListener("click", function () {
+      this.parentNode.parentNode.remove();
+    });
   } else {
-    alert("No input");
+    messageUser.style.display = "block";
+    toDoListContainer.style.display = "none";
   }
 });
 
 // Remove All Function
 removeList.addEventListener("click", function () {
   toDoListContainer.innerHTML = "";
+});
+
+messageClose.addEventListener("click", () => {
+  messageUser.style.display = "none";
+  toDoListContainer.style.display = "block";
 });
